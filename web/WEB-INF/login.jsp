@@ -6,6 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib tagdir="/WEB-INF/tags" prefix="sait" %>
+<%@taglib uri="/WEB-INF/tlds/sait.tld" prefix="tagHandle" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,6 +14,15 @@
         <title>Login Page</title>
     </head>
     <body>
+        <tagHandle:Debug>
+            Remote Host: ${pageContext.request.remoteHost}<br />
+            Session ID: ${pageContext.session.id}
+
+            
+        </tagHandle:Debug>
+       
         <sait:login></sait:login>
+         
+        
     </body>
 </html>
